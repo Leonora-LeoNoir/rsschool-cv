@@ -4,7 +4,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  font-size: 16px;
+  font-size: 18px;
   color: #220404;
 }
 * {
@@ -14,11 +14,18 @@ html {
   scroll-behavior: smooth;
 }
 h1,
-h2 {
+h2,
+h3 {
   font-family: "Montserrat", sans-serif;
 }
 p {
   font-family: "Lato", sans-serif;
+}
+a {
+  color: #220404;
+}
+a:hover {
+  color: #6d5353;
 }
 .header {
   background-color: #cdb891;
@@ -32,7 +39,7 @@ p {
   background-color: #cdb891;
   display: block;
 }
-.conteiner {
+.container {
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -68,17 +75,122 @@ p {
 }
 .nav-link:hover:after {
   width: 100%;
-  color: #a18a8d;
+  color: #948082;
 }
 .main-container {
   display: flex;
   flex-wrap: wrap;
 }
 .section {
+  width: 100%;
+  border-bottom: 1px solid #282c34;
+}
+
+.section-profile {
+  display: flex;
+  justify-content: space-evenly;
+  user-select: none;
+  text-align: center;
+  padding: 50px 30px 35px;
+  border-bottom: 9px solid #948082;
+}
+.section-profile-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  text-transform: uppercase;
+}
+.section-profile-name {
+  position: relative;
+  padding: 0;
+  color: #282c34;
+  font-size: 48px;
+  font-weight: 400;
+  letter-spacing: 10px;
+}
+.section-profile-profession {
+  position: relative;
+  padding: 0;
+  color: #282c34;
+  font-size: 24px;
+  font-weight: 300;
+}
+.section-profile-avatar {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  box-shadow: 0 0 5px #282c34;
+  filter: grayscale(0.2) brightness(1.05);
+  transition: 0.3s;
+}
+
+.left-column {
   width: 50%;
 }
+.right-column {
+  width: 50%;
+}
+pre code {
+  background-color: #f4f4f4cb;
+  padding: 15px;
+  display: block;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+.container-footer {
+  display: flex;
+  padding: 15px;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  color: #282c34;
+}
+.school {
+  width: 121px;
+  height: 45px;
+}
 @media (max-width: 768px) {
+  .nav-list {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  .nav-link {
+    padding: 10px 0;
+    font-size: 18px;
+  }
   .section {
+    width: 100%;
+  }
+  .section-profile {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px 20px;
+    gap: 20px;
+  }
+
+  .section-profile-avatar {
+    width: 180px;
+    height: 180px;
+  }
+
+  .section-profile-name {
+    font-size: 32px;
+    letter-spacing: 5px;
+  }
+
+  .section-profile-profession {
+    font-size: 18px;
+  }
+  .left-column,
+  .right-column {
     width: 100%;
   }
 }
